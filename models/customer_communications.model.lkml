@@ -17,10 +17,8 @@ explore: late_payment_responses {
 explore: email_text_opt_outs {
 }
 
-explore: trueaccord_emails {
-  join: trueaccord_texts {
-    type: full_outer
-    sql_on: ${trueaccord_emails.user_id} = ${trueaccord_texts.user_id} ;;
-    relationship: many_to_many
-  }
+explore: trueaccord_message_to_payment {
+}
+
+explore: trueaccord_placement_effect {
 }
