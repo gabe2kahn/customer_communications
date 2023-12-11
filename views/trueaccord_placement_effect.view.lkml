@@ -117,7 +117,7 @@ view: trueaccord_placement_effect {
 
   measure: cures_28d {
     type: count_distinct
-    sql: CASE WHEN ${overdue_after_14d} = 'false' THEN ${user_id} END ;;
+    sql: CASE WHEN ${overdue_after_28d} = 'false' THEN ${user_id} END ;;
   }
 
   measure: cure_rate_1d {
