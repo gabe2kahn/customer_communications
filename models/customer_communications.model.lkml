@@ -22,3 +22,6 @@ explore: trueaccord_message_to_payment {
 
 explore: trueaccord_placement_effect {
 }
+
+explore: goal_questionnaire_responses {
+}
