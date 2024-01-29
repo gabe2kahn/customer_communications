@@ -8,7 +8,7 @@ view: late_payment_responses {
   }
 
   dimension: current_level {
-    type: number
+    type: string
     sql: ${TABLE}."CURRENT_LEVEL" ;;
   }
 
@@ -19,7 +19,7 @@ view: late_payment_responses {
 
   dimension: days_overdue_at_time_of_response {
     type: number
-    sql: ${TABLE}."DAYS_OVERDUE_AT_TIME_OF_RESPONSE" ;;
+    sql: COALESCE(${TABLE}."DAYS_OVERDUE_AT_TIME_OF_RESPONSE",1) ;;
   }
 
   dimension_group: last_update_ts {
@@ -29,7 +29,7 @@ view: late_payment_responses {
   }
 
   dimension: level_at_time_of_response {
-    type: number
+    type: string
     sql: ${TABLE}."LEVEL_AT_TIME_OF_RESPONSE" ;;
   }
 
