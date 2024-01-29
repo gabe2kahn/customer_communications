@@ -1,10 +1,16 @@
 view: late_payment_responses {
   sql_table_name: "CUSTOMER_COMMUNICATIONS"."LATE_PAYMENT_RESPONSES" ;;
 
+  dimension: active_level {
+    type: number
+    sql: ${TABLE}."ACTIVE_LEVEL" ;;
+  }
+
   dimension: current_days_overdue {
     type: number
     sql: ${TABLE}."CURRENT_DAYS_OVERDUE" ;;
   }
+
   dimension: currently_overdue_ind {
     type: yesno
     sql: ${TABLE}."CURRENTLY_OVERDUE_IND" ;;
